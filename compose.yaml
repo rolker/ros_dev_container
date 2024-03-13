@@ -1,0 +1,23 @@
+services:
+  workspace:
+    image: noetic-workspace
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: noetic-workspace
+
+    # Interactive shell
+    stdin_open: true
+    tty: true
+    # Networking and IPC for ROS 2
+    network_mode: host
+    ipc: host
+    environment:
+      DISPLAY: $DISPLAY
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ~/.Xauthority:/home/devuser/.Xauthority
+      - ./:/workspaces:cached
+    command: /bin/bash
+    privileged: true
+

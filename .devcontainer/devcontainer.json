@@ -1,0 +1,6 @@
+{
+  "name": "noetic-dev-container",
+  "dockerComposeFile": "../compose.yaml",
+  "service": "workspace",
+  "workspaceFolder": "/workspaces"
+}
