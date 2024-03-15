@@ -80,9 +80,14 @@ SHELL [ "/bin/bash" , "-c" ]
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get upgrade -y && apt-get install -y --no-install-recommends \
     bash-completion \
+    flite1-dev \
     git \
     less \
     libgstreamer1.0-dev \
+    libgstreamer-plugins-base1.0-dev \
+    libgstrtspserver-1.0-dev \
+    liblivemedia-dev \
+    libsnmp-dev \
     nano \
     python3-vcstool \
     wget \
